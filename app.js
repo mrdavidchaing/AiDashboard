@@ -36,7 +36,7 @@ document.querySelectorAll('[data-range]').forEach((button) => button.addEventLis
 document.querySelector('#addButton').addEventListener('click', () => dialog.showModal());
 document.querySelector('#themeButton').addEventListener('click', () => document.body.classList.toggle('dark'));
 document.querySelector('#settingsButton').addEventListener('click', () => showToast('Settings are ready for your real API keys.'));
-document.querySelector('#viewAllButton').addEventListener('click', () => showToast('All four assistants are already at the party.'));
+document.querySelector('#viewAllButton').addEventListener('click', () => showToast('All three assistants are already at the party.'));
 
 document.querySelector('#usageForm').addEventListener('submit', (event) => {
   if (event.submitter?.value === 'cancel') return;
