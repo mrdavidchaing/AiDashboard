@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>Prompt Party - AI Usage Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Prompt Party home"><span class="brand-mark">P</span><span>prompt<br>party</span></a>
+      <nav>
+        <a class="nav-item active" href="#overview" aria-current="page"><span class="nav-icon">⌁</span><span>Overview</span></a>
+        <a class="nav-item" href="#assistants"><span class="nav-icon">◌</span><span>Assistants</span></a>
+        <a class="nav-item" href="#activity"><span class="nav-icon">↗</span><span>Activity</span></a>
+        <a class="nav-item" href="#budget"><span class="nav-icon">◎</span><span>Budget</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="nav-item button-link" id="settingsButton"><span class="nav-icon">⚙</span><span>Settings</span></button>
+        <div class="profile"><div class="profile-initial">D</div><div><strong>David</strong><span>Personal workspace</span></div></div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div><p class="eyebrow">Sunday, June 21</p><h1>Good morning, David.</h1></div>
+        <div class="top-actions">
+          <button class="icon-button" id="themeButton" aria-label="Toggle color theme">☼</button>
+          <button class="primary-button" id="addButton"><span>＋</span> Log usage</button>
+        </div>
+      </header>
+
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <div class="status-pill"><span></span> All systems delightfully busy</div>
+          <h2>Your AI crew has been<br><em>putting in the work.</em></h2>
+          <p>See where your prompts went, what they cost, and which little helper earned bragging rights.</p>
+        </div>
+        <div class="mascot-stage" aria-label="Four AI assistant avatars">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="mini-avatar coral" aria-hidden="true"><div class="antenna"></div><div class="face"><i></i><i></i><b></b></div></div>
+          <div class="mini-avatar violet" aria-hidden="true"><div class="cloud-bump"></div><div class="face glasses"><i></i><i></i><b></b></div></div>
+          <div class="mini-avatar gold" aria-hidden="true"><div class="headphones"></div><div class="face"><i></i><i></i><b></b></div></div>
+          <div class="mini-avatar teal" aria-hidden="true"><div class="sprout"></div><div class="face"><i></i><i></i><b></b></div></div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Usage summary">
+        <article class="metric-card"><div class="metric-head"><span>Total prompts</span><span class="trend up">↗ 18%</span></div><strong data-metric="prompts">1,284</strong><p>this month</p><div class="sparkline coral-line" aria-hidden="true"></div></article>
+        <article class="metric-card"><div class="metric-head"><span>Tokens used</span><span class="trend up">↗ 12%</span></div><strong data-metric="tokens">3.2M</strong><p>across all models</p><div class="sparkline violet-line" aria-hidden="true"></div></article>
+        <article class="metric-card"><div class="metric-head"><span>Estimated cost</span><span class="trend down">↘ 6%</span></div><strong data-metric="cost">$42.80</strong><p>of $75 monthly budget</p><div class="budget-track"><span style="--progress:57%"></span></div></article>
+        <article class="metric-card"><div class="metric-head"><span>Time saved</span><span class="trend up">↗ 23%</span></div><strong data-metric="time">19.5h</strong><p>worth a long weekend</p><div class="sparkline teal-line" aria-hidden="true"></div></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel activity-panel" id="activity">
+          <div class="panel-header">
+            <div><p class="eyebrow">Prompt rhythm</p><h3>Activity over time</h3></div>
+            <div class="range-picker" role="group" aria-label="Chart date range"><button data-range="7">7D</button><button class="active" data-range="30">30D</button><button data-range="90">3M</button></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="y-labels"><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div>
+            <div class="chart" id="activityChart" aria-label="Daily prompts bar chart"></div>
+          </div>
+          <div class="chart-legend"><span><i class="legend-dot coral-dot"></i>Prompts</span><span class="chart-note">Busiest day: <strong>Tuesday</strong></span></div>
+        </article>
+
+        <article class="panel budget-panel" id="budget">
+          <div class="panel-header"><div><p class="eyebrow">June budget</p><h3>Spending pace</h3></div><button class="more-button" aria-label="More budget options">•••</button></div>
+          <div class="donut-wrap"><div class="donut"><div><strong>57%</strong><span>used</span></div></div></div>
+          <div class="budget-row"><span>Spent so far</span><strong>$42.80</strong></div>
+          <div class="budget-row muted"><span>Remaining</span><strong>$32.20</strong></div>
+          <div class="budget-callout"><span>✓</span><p><strong>Right on track</strong><br>Projected total: $68.40</p></div>
+        </article>
+      </section>
+
+      <section class="assistants-section" id="assistants">
+        <div class="section-heading"><div><p class="eyebrow">Meet the crew</p><h3>Your AI assistants</h3></div><button class="text-button" id="viewAllButton">View all <span>→</span></button></div>
+        <div class="assistant-grid" id="assistantGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="usageDialog">
+    <form method="dialog" id="usageForm">
+      <div class="dialog-head"><div><p class="eyebrow">Quick entry</p><h3>Log AI usage</h3></div><button value="cancel" class="close-button" aria-label="Close">×</button></div>
+      <label>Assistant<select id="assistantSelect"><option value="0">Pip · ChatGPT</option><option value="1">Nimbus · Claude</option><option value="2">Sparky · Gemini</option><option value="3">Moss · Perplexity</option></select></label>
+      <label>Number of prompts<input id="promptInput" type="number" min="1" max="999" value="12" required></label>
+      <button class="primary-button full" value="default">Add to dashboard</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Usage added. Nice work!</div>
+  <script src="app.js"></script>
+</body>
+</html>
