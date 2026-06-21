@@ -3,3 +3,14 @@
 @media(max-width:1050px){.page-shell{grid-template-columns:76px 1fr}.sidebar{padding:28px 13px}.brand span:not(.brand-mark),.nav-item span:last-child,.profile>div:last-child{display:none}.brand{justify-content:center}.sidebar nav{margin-top:50px}.nav-item{justify-content:center}.mascot-stage{width:270px;flex-basis:270px}.metrics{grid-template-columns:repeat(2,1fr)}.assistant-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.page-shell{display:block}.sidebar{position:fixed;top:auto;bottom:0;left:0;right:0;width:100%;height:68px;display:block;padding:9px 18px;border:0;border-top:1px solid var(--line)}.brand,.sidebar-bottom{display:none}.sidebar nav{margin:0;display:flex;justify-content:space-around}.nav-item{padding:10px 16px}.sidebar nav .nav-item span:last-child{display:none}main{padding:22px 16px 95px}.topbar{margin-bottom:22px}.hero{padding:30px 25px;min-height:430px;align-items:flex-start}.hero h2{font-size:34px}.mascot-stage{position:absolute;width:300px;height:190px;right:10px;bottom:2px}.metrics,.assistant-grid,.dashboard-grid{grid-template-columns:1fr}.metric-card{min-height:135px}.budget-panel{order:-1}.topbar .eyebrow{display:none}.top-actions .icon-button{display:none}}
 @media(max-width:420px){.topbar h1{font-size:16px}.primary-button{padding:10px 13px}.hero h2{font-size:30px}.hero p{font-size:12px}.metrics{grid-template-columns:1fr 1fr;gap:9px}.metric-card{padding:15px}.metric-card>strong{font-size:23px}.assistant-grid{grid-template-columns:1fr}.chart-wrap{height:180px}}
+.assistant-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1050px){.assistant-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.assistant-grid{grid-template-columns:1fr}}
+.mini-avatar.codex{background:#2f80ed;left:15px;top:48px}
+.mini-avatar.codex .antenna:after{background:#2f80ed}
+.mini-avatar.claude{background:#d97745;right:46px;top:12px}
+.mini-avatar.claude .cloud-bump{background:#d97745}
+.mini-avatar.gemini{background:linear-gradient(135deg,#4285f4 5%,#a142f4 36%,#ea4335 67%,#fbbc05);left:115px;bottom:0;border-radius:50% 45% 55% 45%}
+.avatar.codex{background:#2f80ed}
+.avatar.claude{background:#d97745;border-radius:50% 50% 40% 45%}
+.avatar.gemini{background:linear-gradient(135deg,#4285f4 5%,#a142f4 36%,#ea4335 67%,#fbbc05);transform:rotate(3deg)}
