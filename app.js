@@ -1,8 +1,7 @@
 const assistants = [
-  { name: 'Pip', service: 'ChatGPT', model: 'GPT-4.1', color: 'coral', prompts: 486, cost: 18.42 },
-  { name: 'Nimbus', service: 'Claude', model: 'Sonnet 4', color: 'violet', prompts: 342, cost: 12.16 },
-  { name: 'Sparky', service: 'Gemini', model: '2.5 Pro', color: 'gold', prompts: 276, cost: 7.88 },
-  { name: 'Moss', service: 'Perplexity', model: 'Sonar', color: 'teal', prompts: 180, cost: 4.34 }
+  { name: 'Pip', service: 'Codex', model: 'GPT-5', color: 'codex', prompts: 590, cost: 20.96 },
+  { name: 'Nimbus', service: 'Claude', model: 'Sonnet 4', color: 'claude', prompts: 402, cost: 13.96 },
+  { name: 'Sparky', service: 'Gemini', model: '2.5 Pro', color: 'gemini', prompts: 292, cost: 7.88 }
 ];
 
 const series = {
